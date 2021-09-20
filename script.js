@@ -18,3 +18,18 @@ btn.addEventListener('click', function () {
     div.classList.add('square');
     
     divvy.appendChild(div)})
+
+// make box id appear with mouse hover    
+
+    divvy.addEventListener('mouseenter', function () {
+        let h2 = document.createElement('h2');
+        h2.id = counter;
+        let h2Text = document.createTextNode(divvy.id);
+        h2.appendChild(h2Text);
+        divvy.appendChild(h2);
+      })
+
+      divvy.addEventListener('mouseleave', function () {
+        var elem = document.getElementById(counter);
+        elem.parentNode.removeChild(elem);
+      })
